@@ -139,5 +139,16 @@ namespace SXEdu2XHKD.WebUI.Models
             }
             return courseModel;
         }
+
+        public static LearningRecordModel LearningRecordToLearningRecordModel(LearningRecord learningRecord)
+        {
+            LearningRecordModel learningRecordModel = new LearningRecordModel()
+            {
+                LearningRecordId = learningRecord.LearningRecordId,
+                RecordTime = learningRecord.RecordTime.ToString(),
+                SxEduUserName = learningRecord.SxEduUserName
+            };
+            return learningRecordModel;
+        }
     }
 }

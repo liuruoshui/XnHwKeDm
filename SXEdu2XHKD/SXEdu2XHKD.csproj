@@ -143,6 +143,7 @@
     <Compile Include="Models\EntityToViewModel.cs" />
     <Compile Include="Models\ForgotPassWordModel.cs" />
     <Compile Include="Models\InterfaceResponseModel.cs" />
+    <Compile Include="Models\LearningRecordModel.cs" />
     <Compile Include="Models\LoginRecordResponseModel.cs" />
     <Compile Include="Models\MemberInfoEditModel.cs" />
     <Compile Include="Models\MemberInfoModel.cs" />

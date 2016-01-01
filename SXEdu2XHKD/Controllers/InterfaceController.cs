@@ -39,7 +39,7 @@ namespace SXEdu2XHKD.WebUI.Controllers
                     interfaceResponseModel.Response = SxEduUserInfo;
                 }
             }
-            return Content(JsonConvert.SerializeObject(interfaceResponseModel),"text/json");
+            return Content(JsonConvert.SerializeObject(interfaceResponseModel), "text/json");
         }
 
         /// <summary>
@@ -78,9 +78,9 @@ namespace SXEdu2XHKD.WebUI.Controllers
             {
                 LoginRecordRepository loginRecordRepository = new LoginRecordRepository();
                 List<LoginRecord> loginRecordList = loginRecordRepository.GetLoginRecordByDate(dateTime);
-                if(loginRecordList!= null)
+                if (loginRecordList != null)
                 {
-                    List<LoginRecordResponseModel> loginRecordResponseModelList = new List<LoginRecordResponseModel>(); 
+                    List<LoginRecordResponseModel> loginRecordResponseModelList = new List<LoginRecordResponseModel>();
                     foreach (LoginRecord loginRecord in loginRecordList)
                     {
                         loginRecordResponseModelList.Add(EntityToViewModel.LoginRecordToLoginResponseModel(loginRecord));
@@ -141,5 +141,29 @@ namespace SXEdu2XHKD.WebUI.Controllers
             };
             return Json(interfaceResponseModel, JsonRequestBehavior.AllowGet);
         }
+
+        public ActionResult GetLearningRecordByDate()
+        {
+            InterfaceResponseModel interfaceResponseModel = new InterfaceResponseModel();
+            string strDate = Request.QueryString["Date"];
+            //strDate += " 00:00:00";
+            DateTime dateTime = new DateTime();
+            if (DateTime.TryParse(strDate, out dateTime))
+            {
+                LearningRecordRepository learningRecordRepository = new LearningRecordRepository();
+                List<LearningRecord> learningRecordList = learningRecordRepository.GetLearningRecordByDate(dateTime);
+                if (learningRecordList != null)
+                {
+                    List<LearningRecordModel> learningRecordModelList = new List<LearningRecordModel>();
+                    foreach (LearningRecord learningRecord in learningRecordList)
+                    {
+                        learningRecordModelList.Add(EntityToViewModel.LearningRecordToLearningRecordModel(learningRecord));
+                    }
+                    interfaceResponseModel.Successful = true;
+                    interfaceResponseModel.Response = learningRecordModelList;
+                };
+            }
+            return Json(interfaceResponseModel, JsonRequestBehavior.AllowGet);
         }
+    }
 }
