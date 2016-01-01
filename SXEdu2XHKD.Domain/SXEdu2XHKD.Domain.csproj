@@ -53,18 +53,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
-    <Compile Include="Common\CommandInfo.cs" />
     <Compile Include="Common\DapperHelper.cs" />
-    <Compile Include="Common\DbHelperSQL.cs" />
-    <Compile Include="Common\DESEncrypt.cs" />
-    <Compile Include="Common\PageValidate.cs" />
     <Compile Include="Common\PassWordProcessing.cs" />
-    <Compile Include="Common\PubConstant.cs" />
-    <Compile Include="Common\SQLHelper.cs" />
     <Compile Include="Concrete\ClassRepository.cs" />
     <Compile Include="Concrete\DAL\ClassDal.cs" />
-    <Compile Include="Concrete\DAL\LearningRecord.cs" />
     <Compile Include="Concrete\DAL\LearningRecordDal.cs" />
     <Compile Include="Concrete\DAL\LoginRecordDal.cs" />
     <Compile Include="Concrete\DAL\MemberDal.cs" />
