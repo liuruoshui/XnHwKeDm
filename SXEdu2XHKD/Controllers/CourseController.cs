@@ -39,7 +39,7 @@ namespace SXEdu2XHKD.WebUI.Controllers
                     SxEduUserName = member.SXEduUserName
                 };
                 learningRecordRepository.Add(learningRecord);
-                return RedirectToAction("Learn", "Course", new { CourseCode = pp22CourseView.CourseCode, SwfId = pp22CourseView.Pp22CourseSwfs[0].id });
+                return RedirectToAction("Learn", "Course", new { CourseCode = pp22CourseView.CourseCode, SwfId = pp22CourseView.Pp22CourseSwfs.FirstOrDefault().id });
             }
             else
             {

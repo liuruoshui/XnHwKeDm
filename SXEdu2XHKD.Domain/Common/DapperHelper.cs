@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using Dapper;
 
-namespace TestRds.Domain.Common
+namespace SXEdu2XHKD.Domain.Common
 {
     public class DapperHelper
     {
@@ -17,7 +17,7 @@ namespace TestRds.Domain.Common
         /// <returns></returns>
         public static MySqlConnection ConnectToSxEdu()
         {
-            return OpenMySqlConnection(ConfigurationManager.AppSettings["ConnectionStringSXEdu"];);
+            return OpenMySqlConnection(ConfigurationManager.AppSettings["ConnectionStringSXEdu"]);
         }
 
         /// <summary>

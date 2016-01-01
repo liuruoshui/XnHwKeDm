@@ -67,7 +67,10 @@
     <Compile Include="Concrete\DAL\LearningRecord.cs" />
     <Compile Include="Concrete\DAL\LoginRecord.cs" />
     <Compile Include="Concrete\DAL\Member.cs" />
+    <Compile Include="Concrete\DAL\MemberDal.cs" />
     <Compile Include="Concrete\DAL\MySqlMemberDal.cs" />
+    <Compile Include="Concrete\DAL\Pp22CourseSwfDal.cs" />
+    <Compile Include="Concrete\DAL\Pp22CourseViewDal.cs" />
     <Compile Include="Concrete\DAL\School.cs" />
     <Compile Include="Concrete\DAL\Pp22CourseSwf.cs" />
     <Compile Include="Concrete\DAL\Pp22CourseView.cs" />
@@ -84,15 +87,12 @@
     <Compile Include="Concrete\PartialRepository\LearningRecordRepository.cs" />
     <Compile Include="Concrete\PartialRepository\LoginRecordRepository.cs" />
     <Compile Include="Concrete\PartialRepository\MemberRepository.cs" />
-    <Compile Include="Concrete\PartialRepository\Pp22CourseSwfRepository.cs" />
-    <Compile Include="Concrete\PartialRepository\Pp22CourseViewRepository.cs" />
     <Compile Include="Concrete\PartialRepository\SchoolRepository.cs" />
     <Compile Include="Concrete\SchoolRepository.cs" />
     <Compile Include="Concrete\Pp22CourseSwfRepository.cs" />
     <Compile Include="Concrete\Pp22CourseViewRepository.cs" />
     <Compile Include="Entities\Class.cs" />
     <Compile Include="Entities\EntityPartial\PartialMember.cs" />
-    <Compile Include="Entities\EntityPartial\PartialPp22CourseView.cs" />
     <Compile Include="Entities\LearningRecord.cs" />
     <Compile Include="Entities\LoginRecord.cs" />
     <Compile Include="Entities\Member.cs" />

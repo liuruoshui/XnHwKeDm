@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 namespace SXEdu2XHKD.Domain.Entities
 {
 	/// <summary>
@@ -21,7 +22,7 @@ namespace SXEdu2XHKD.Domain.Entities
         public int? gradeid{get;set;}
         public string courseclass{get;set;}
 		#endregion Model
-
+        public IEnumerable<Pp22CourseSwf> Pp22CourseSwfs { get; set; }
 	}
 }
 
