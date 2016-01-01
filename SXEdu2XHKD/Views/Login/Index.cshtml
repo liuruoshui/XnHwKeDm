@@ -1,0 +1,11 @@
+﻿@model SXEdu2XHKD.WebUI.Models.LoginModel
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_LayoutForm.cshtml";
+    ViewBag.SpecificValidateJs = "/Scripts/ValidationMethods/ValidateLogin.js";
+}
+
+<div class="container containerLogin">
+    <span hidden id="Guid">@ViewBag.Guid</span>
+    @Html.Partial("_loginForm", Model)
+</div> <!-- /container -->

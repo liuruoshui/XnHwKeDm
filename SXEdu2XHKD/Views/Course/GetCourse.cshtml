@@ -1,0 +1,21 @@
+﻿@model SXEdu2XHKD.Domain.Entities.Pp22CourseView
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>GetCourse</title>
+</head>
+<body>
+    <div>
+        <div>@Model.LecURL</div>
+       @foreach(SXEdu2XHKD.Domain.Entities.Pp22CourseSwf pp22CourseSwf in Model.Pp22CourseSwfs){
+           <p>@pp22CourseSwf.mulu</p>
+       }
+    </div>
+</body>
+</html>

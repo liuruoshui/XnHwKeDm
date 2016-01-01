@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SXEdu2XHKD", "SXEdu2XHKD\SXEdu2XHKD.csproj", "{A109DB52-20BF-4328-8352-0D9805705E60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SXEdu2XHKD.Domain", "SXEdu2XHKD.Domain\SXEdu2XHKD.Domain.csproj", "{079BA83E-BFDB-48A0-A8C4-81C891F8EF93}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A109DB52-20BF-4328-8352-0D9805705E60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A109DB52-20BF-4328-8352-0D9805705E60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A109DB52-20BF-4328-8352-0D9805705E60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A109DB52-20BF-4328-8352-0D9805705E60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{079BA83E-BFDB-48A0-A8C4-81C891F8EF93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{079BA83E-BFDB-48A0-A8C4-81C891F8EF93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{079BA83E-BFDB-48A0-A8C4-81C891F8EF93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{079BA83E-BFDB-48A0-A8C4-81C891F8EF93}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

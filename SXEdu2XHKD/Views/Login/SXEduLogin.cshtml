@@ -1,0 +1,22 @@
+﻿@model SXEdu2XHKD.WebUI.Models.RegisterModel
+
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_LayoutForm.cshtml";
+    ViewBag.SpecificValidateJs = "/Scripts/ValidationMethods/ValidateRegister.js";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-offset-2 col-xs-8 col-md-offset-3 col-md-7">
+            <h2>初次登陆会员信息补全</h2>
+            <p>
+                <span class="h4" style="color:OrangeRed"><strong>@Model.Name</strong></span>, 您好。欢迎首次使用新华课典。<br />
+                在您开始使用之前，您需要设定您的登陆名并设置密码。<br />
+                该账号将作为您的在新华课典的登陆账号。
+                所以请您务必<strong>牢记</strong>您的<strong>用户名和密码</strong>
+            </p>
+            @Html.Partial("~/Views/Member/_registerMember", Model)
+        </div>
+    </div>
+</div> <!-- /container -->

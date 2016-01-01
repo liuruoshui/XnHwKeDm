@@ -1,0 +1,107 @@
+﻿@model SXEdu2XHKD.Domain.Entities.Member
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="新华课典山西首页">
+    @*<link href="~/Content/bootstrap.min.css" rel="stylesheet" />*@
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="~/Content/css/myPublic.css" rel="stylesheet" type="text/css" />
+    @*<script src="~/Scripts/jquery-1.9.1.min.js"></script>*@
+    <script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+    @*<script src="~/Scripts/bootstrap.min.js"></script>*@
+    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <title>新华课典 &ndash; 山西 &ndash; 首页</title>
+
+</head>
+<body>
+    <!-- 置顶导航栏 -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">新华课典</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="container">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">关于<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">关于新华课典</a></li>
+                                <li><a href="#">关于SPS</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">最新公告</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">联系我们<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">课程反馈</a></li>
+                                <li><a href="#">业务咨询</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">学习档案<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">学习任务</a></li>
+                                <li><a href="#">愿望树</a></li>
+                                <li><a href="#">成绩管理</a></li>
+                                <li><a href="#">自由奖励</a></li>
+                                <li><a href="#">积分管理</a></li>
+                                <li><a href="#">科学消费</a></li>
+                            </ul>
+                        </li>
+                        @*<li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SPS服务<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">同步预习</a></li>
+                                <li><a href="#">偏科解决</a></li>
+                                <li><a href="#">作业讲解</a></li>
+                                <li><a href="#">做题训练</a></li>
+                                <li><a href="#">冥想思</a></li>
+                                <li><a href="#">VIP服务</a></li>
+                                <li><a href="#">专题专项</a></li>
+                            </ul>
+                        </li>*@
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@Model.Name<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="javascript:$('#contents').load('@Url.Action("Info","Member")');">用户信息</a></li>
+                                <li><a href="javascript:$('#contents').load('@Url.Action("InfoEdit", "Member")')">个人设置</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="@Url.Action("Exit","Member")">退出登录</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="navbar-form navbar-right" action="/Course/GetCourse" method="post" target="_blank">
+                        @Html.AntiForgeryToken()
+                        <div class="form-group">
+                            <input type="text" placeholder="请输入课程编码" name="CourseCode" class="form-control">
+                        </div>
+                        <button type="submit" class="btn btn-success">提交</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" id="contents">
+
+    </div> <!-- /container -->
+
+</body>
+</html>

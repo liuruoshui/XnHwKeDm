@@ -1,0 +1,28 @@
+﻿@model SXEdu2XHKD.WebUI.Models.LoginModel
+
+<form action="/Login/Index" method="post" id="LoginForm" class="form-signin">
+
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    <strong>@Html.ValidationMessage("InfoWrong")</strong>
+    <div class="form-group">
+    @Html.LabelFor(model => model.UserName, new { @class = "sr-only" })
+
+    <input type="text" id="UserName" name="UserName" class="form-control" placeholder="请输入用户名" />
+        @Html.ValidationMessageFor(model => model.UserName)
+    </div>
+    <div class="form-group">
+    @Html.LabelFor(model => model.PassWord, new { @class = "sr-only" })
+    <input type="password" id="PassWord" name="PassWord" class="form-control" placeholder="请输入密码" />
+    </div>
+    @*<div class="checkbox">
+        <label>
+            @Html.LabelFor(model => model.IsRemembered, new { @class = "sr-only" })
+            @Html.EditorFor(model => model.IsRemembered) 记住登录状态
+        </label>
+    </div>*@
+    <div class="row">
+        <button class="btn btn-primary col-md-offset-1 col-md-3 col-xs-offset-1 col-xs-4" type="submit">登陆</button>
+        <a href="@Url.Action("ForgotPassWord","Member")" class="btn btn-link col-md-offset-4 col-md-3 col-xs-offset-2 col-xs-4">忘记密码</a>
+    </div>
+</form>

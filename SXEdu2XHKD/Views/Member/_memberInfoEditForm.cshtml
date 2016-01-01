@@ -1,0 +1,48 @@
+﻿@model SXEdu2XHKD.WebUI.Models.MemberInfoEditModel
+
+<h1 class="col-sm-offset-1">个人设置</h1>
+<form action="/Member/InfoEdit" method="post" id="MemberInfoEditForm" class="form-horizontal col-sm-offset-2 col-sm-6">
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="ClassName">@Html.DisplayNameFor(m => m.ClassName)</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="ClassName" name="ClassName" value="@Model.ClassName" />
+        </div>
+        @Html.ValidationMessageFor(model => model.ClassName)
+    </div>
+
+
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="Name">@Html.DisplayNameFor(m => m.Name)</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="Name" name="Name" value="@Model.Name" />
+        </div>
+        @Html.ValidationMessageFor(model => model.Name)
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="Name">@Html.DisplayNameFor(m => m.Email)</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="Email" name="Email" value="@Model.Email" />
+        </div>
+        @Html.ValidationMessageFor(model => model.Email)
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="Name">@Html.DisplayNameFor(m => m.QQ)</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="QQ" name="QQ" value="@Model.QQ" />
+        </div>
+        @Html.ValidationMessageFor(model => model.QQ)
+    </div>
+
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <input type="submit" class="btn btn-default col-xs-3 col-md-2" value="确认">
+            <input type="button" onclick="$('#contents').html(' ');" class="btn btn-default col-xs-offset-3 col-xs-3 col-md-offset-6 col-md-2" value="取消">
+        </div>
+    </div>
+
+</form>

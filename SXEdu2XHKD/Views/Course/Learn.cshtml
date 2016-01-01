@@ -1,0 +1,86 @@
+﻿@model SXEdu2XHKD.WebUI.Models.CourseModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="新华课典山西">
+    @*<link href="~/Content/bootstrap.min.css" rel="stylesheet" />*@
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="~/Content/css/myPublic.css" rel="stylesheet" type="text/css" />
+    @*<script src="~/Scripts/jquery-1.9.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>*@
+    <script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <title>Learn</title>
+</head>
+<body>
+    <div class="container">
+        @*<div id="player">
+            <object id="LecSummulti" classid="clsid:5EDEB0F0-1E6F-4E67-9786-E3B6FA7B6F41" border="0" width="746" height="25"></object>
+            <object id="SmartXCla" classid="clsid:2841BA0C-6C4B-4549-8948-92C6ECF9378E" width="746" height="438" border="0">
+                <param name="filePath" value="" />
+                <param name="fileurl" value="" />
+                <param name="SecPath" value="@Model.LecURL" />
+                <param name="SecURL" value="" />
+                <param name="ScrWidth" value="746" />
+                <param name="ScrHeight" value="438" />
+                <param name="_Version" value="65536" />
+                <param name="_ExtentX" value="7403" />
+                <param name="_ExtentY" value="8567" />
+                <param name="_StockProps" value="173" />
+                <param name="serverIP" value="218.60.34.183" />
+                <param name="PortNum" value="80" />
+                <param name="TimerValue" value="1000" />
+                <param name="AntiAlias" value="True" />
+                <param name="LecCount" value="" />
+                <param name="WMPEmbed" value="false" />
+                <param name="wmode" value="transparent" />
+                <embed width="746" height="438" border="0" filepath="" fileurl="" secpath="@Model.LecURL" securl="" scrwidth="746" scrheight="438" _version="65536" _extentx="7403" _extenty="8567" _stockprops="173" serverip="218.60.34.183" portnum="80" timervalue="1000" antialias="True" leccount="" wmpembed="false" wmode="transparent"></embed>
+            </object>
+        </div>*@
+        <div id="player2">
+            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="746" height="438">
+                <param name="movie" value="@Model.SwfURL" />
+                <param name="quality" value="high" />
+                <param name="wmode" value="transparent" />
+                <embed id="embFlashPlayer" src="@Model.SwfURL" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="746" height="438" wmode="transparent"></embed>
+            </object>
+        </div>
+
+        <div>
+            @Html.DisplayNameFor(model => model.LecURL)
+        </div>
+        <div>
+            @Html.DisplayFor(model => model.LecURL)
+        </div>
+
+        <div>
+            @Html.DisplayNameFor(model => model.SwfURL)
+        </div>
+        <div>
+            @Html.DisplayFor(model => model.SwfURL)
+        </div>
+
+        <div class="display-label">
+            @Html.DisplayNameFor(model => model.CourseCode)
+        </div>
+        <div>
+            @Html.DisplayFor(model => model.CourseCode)
+        </div>
+        <div>
+            @for (int i = 0; i<Model.SwfIds.Count;i++ )
+            {
+                <a href="@Url.Action("Learn", "Course", new { CourseCode = Model.CourseCode, SwfId = Model.SwfIds[i] })">@(i+1)</a>
+            }
+        </div>
+    </div>
+</body>
+</html>
