@@ -31,7 +31,6 @@ namespace SXEdu2XHKD.Domain.Concrete.DAL
                 queryStr.Append(" where code=@code ");
                 return conn.Query<SXEdu2XHKD.Domain.Entities.Pp22CourseSwf>(queryStr.ToString(), new { code = code });
             }
-
         }
     }
 }

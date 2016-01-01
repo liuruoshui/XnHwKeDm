@@ -14,23 +14,6 @@ namespace SXEdu2XHKD.Domain.Concrete.DAL
     {
         public Member()
         {
-            DbHelper.connectionString = ConfigurationManager.AppSettings["ConnectionStringSXEdu"];
-        }
-        /// <summary>
-        /// 判断某个用户名的用户是否存在
-        /// </summary>
-        /// <param name="name">全表唯一的用户名</param>
-        /// <returns></returns>
-        public bool NameExists(string name)
-        {
-            StringBuilder strSql = new StringBuilder();
-            strSql.Append("select count(1) from Members");
-            strSql.Append(" where UserName=@UserName ");
-            SqlParameter[] parameters = {
-					new SqlParameter("@UserName", SqlDbType.NVarChar)};
-            parameters[0].Value = name;
-
-            return DbHelper.Exists(strSql.ToString(), parameters);
         }
 
         /// <summary>

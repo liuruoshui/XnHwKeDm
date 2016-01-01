@@ -28,7 +28,7 @@ namespace SXEdu2XHKD.Domain.Entities
         public string ParentName{get;set;}
         public int? UserStatus{get;set;}
 		#endregion Model
-
+        public School SchoolEntity { get; set; }
 	}
 }
 

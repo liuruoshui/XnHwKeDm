@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using Dapper;
+using System.Data;
 
 namespace SXEdu2XHKD.Domain.Common
 {
@@ -15,7 +16,7 @@ namespace SXEdu2XHKD.Domain.Common
         /// 打开SxEdu数据库
         /// </summary>
         /// <returns></returns>
-        public static MySqlConnection ConnectToSxEdu()
+        public static IDbConnection ConnectToSxEdu()
         {
             return OpenMySqlConnection(ConfigurationManager.AppSettings["ConnectionStringSXEdu"]);
         }
@@ -24,7 +25,7 @@ namespace SXEdu2XHKD.Domain.Common
         /// 打开Pp22数据库
         /// </summary>
         /// <returns></returns>
-        public static SqlConnection ConnectToPp22()
+        public static IDbConnection ConnectToPp22()
         {
             return OpenSqlConnection(ConfigurationManager.AppSettings["ConnectionStringpp22"]);
         }
