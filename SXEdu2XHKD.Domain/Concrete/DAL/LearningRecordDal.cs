@@ -24,7 +24,7 @@ namespace SXEdu2XHKD.Domain.Concrete.DAL
                 queryStr.Append("insert into LearningRecords(");
                 queryStr.Append("MemberId,CourseCode,RecordTime,SXEduUserName)");
                 queryStr.Append(" values (");
-                queryStr.Append("@MemberId,@CourseCode,@RecordTime,@SXEduUserName);");
+                queryStr.Append("@MemberId,@CourseCode,@RecordTime,@SxEduUserName);");
                 return conn.Execute(queryStr.ToString(), learningRecord);
             }
         }

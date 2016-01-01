@@ -18,7 +18,7 @@ namespace SXEdu2XHKD.Domain.Common
         /// <returns></returns>
         public static IDbConnection ConnectToSxEdu()
         {
-            return OpenSqlConnection(ConfigurationManager.AppSettings["ConnectionStringSXEdu"]);
+            return OpenMySqlConnection(ConfigurationManager.AppSettings["ConnectionStringSXEdu"]);
         }
 
         /// <summary>

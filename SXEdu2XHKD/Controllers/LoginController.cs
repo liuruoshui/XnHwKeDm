@@ -53,8 +53,8 @@ namespace SXEdu2XHKD.WebUI.Controllers
             //ViewBag.ResponsedUserInfo = ResponsedUserInfo;
 
             JObject jObject = JObject.Parse(ResponsedUserInfo);
-            try
-            {
+            //try
+            //{
                 //验证验证信息
                 string result = jObject["SYS_HEAD"]["RET"][0]["RET_MSG"].ToString();
                 
@@ -129,11 +129,11 @@ namespace SXEdu2XHKD.WebUI.Controllers
 
                 }
                 return Redirect("http://www.sxeduyun.com/portal/login.html");
-            }
-            catch
-            {
-                return Redirect("http://www.sxeduyun.com/portal/login.html");
-            }
+            //}
+            //catch
+            //{
+            //    return Redirect("http://www.sxeduyun.com/portal/login.html");
+            //}
         }
 
         [HttpGet]
