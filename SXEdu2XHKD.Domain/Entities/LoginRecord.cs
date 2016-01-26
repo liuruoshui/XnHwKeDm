@@ -10,11 +10,11 @@ namespace SXEdu2XHKD.Domain.Entities
 		public LoginRecord()
 		{}
 		#region Model
-        public int LoginRecordId;
-        public DateTime LogInTime;
-        public DateTime LogOutTime;
-        public int MemberId;
-        public string SXEduUserName;
+        public int LoginRecordId{get;set;}
+        public DateTime LogInTime{get;set;}
+        public DateTime LogOutTime{get;set;}
+        public int MemberId{get;set;}
+        public string SXEduUserName { get; set; }
 
 		#endregion Model
 

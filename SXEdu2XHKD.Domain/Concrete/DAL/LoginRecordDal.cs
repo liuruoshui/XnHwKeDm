@@ -25,12 +25,12 @@ namespace SXEdu2XHKD.Domain.Concrete.DAL
                     queryStr.Append("insert into LoginRecords(");
                     queryStr.Append("LogInTime,LogOutTime,MemberId,SXEduUserName)");
                     queryStr.Append(" values (");
-                    queryStr.Append("@LogInTime,@LogOutTime,@MemberId,@SXEduUserName)");
-                    queryStr.Append(";select @@IDENTITY");
-                    conn.Query(queryStr.ToString(), loginRecord);
+                    queryStr.Append("@LogInTime,@LogOutTime,@MemberId,@SXEduUserName);");
+                    conn.Execute(queryStr.ToString(), loginRecord);
                 }
                 catch (Exception ex)
                 {
+                    Console.WriteLine(ex);
                     isSuccessful = false;
                 }
             }

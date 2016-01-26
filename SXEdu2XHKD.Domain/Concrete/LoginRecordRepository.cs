@@ -33,4 +33,3 @@ namespace SXEdu2XHKD.Domain.Concrete
 		#endregion  BasicMethod
 	}
 }
-
